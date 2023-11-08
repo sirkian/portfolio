@@ -1,16 +1,20 @@
+import Hero from "@/components/Hero";
+
 export default function Home() {
   return (
     <main>
-      <section className="h-[calc(100vh-5rem)] flex items-center justify-center bg-gray-100">
-        HERO
+      <section className="h-[calc(100vh-5rem)] bg-background">
+        <Hero />
       </section>
-      <section className="h-screen flex items-center justify-center bg-gray-200">
+      <section className="h-screen flex items-center justify-center bg-background-800 text-text">
         ABOUT
       </section>
-      <section className="h-screen flex items-center justify-center bg-gray-300">
+      <section className="h-screen flex items-center justify-center bg-background-900 text-text">
         SKILLS
       </section>
-      <section className="h-screen flex items-center justify-center bg-gray-400">
+      <section
+        id="contact"
+        className="h-screen flex items-center justify-center bg-background-950 text-text">
         CONTACT
       </section>
     </main>

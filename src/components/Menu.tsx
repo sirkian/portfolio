@@ -16,6 +16,7 @@ const Menu = () => {
           width={24}
           height={24}
           onClick={() => setOpen(true)}
+          className="invert"
         />
       ) : (
         <Image
@@ -24,10 +25,11 @@ const Menu = () => {
           width={24}
           height={24}
           onClick={() => setOpen(false)}
+          className="invert"
         />
       )}
       {open && (
-        <div className="bg-white absolute left-0 top-20 w-full h-[calc(100vh-5rem)] flex flex-col gap-8 items-center justify-center text-2xl z-10">
+        <div className="bg-background text-text absolute left-0 top-20 w-full h-[calc(100vh-5rem)] flex flex-col gap-8 items-center justify-center text-2xl z-10">
           <Link href="/" onClick={() => setOpen(false)}>
             Homepage
           </Link>
@@ -39,6 +41,7 @@ const Menu = () => {
                   alt={link.title}
                   width={32}
                   height={32}
+                  className="invert"
                 />
               ) : (
                 link.title

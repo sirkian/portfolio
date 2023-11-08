@@ -1,4 +1,9 @@
-import { LinkType } from "@/types/types";
+type LinkType = {
+  id: number;
+  title: string;
+  iconUrl?: string;
+  url: string;
+};
 
 export const links: LinkType[] = [
   { id: 1, title: "Projects", url: "/projects" },

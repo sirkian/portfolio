@@ -5,11 +5,11 @@ import Image from "next/image";
 
 const Navbar = () => {
   return (
-    <nav className="bg-white h-20 p-4 w-full flex items-center justify-center">
-      <div className="flex-1">
+    <nav className="bg-background text-text  border-b-2 border-text-200 h-20 p-4 w-full flex items-center justify-around">
+      <div className="font-bold">
         <Link href="/">Homepage</Link>
       </div>
-      <div className="hidden md:flex gap-4 flex-2">
+      <div className="hidden md:flex gap-4">
         {links.map((link) => (
           <Link href={link.url} key={link.id}>
             {link.iconUrl ? (
@@ -18,6 +18,7 @@ const Navbar = () => {
                 alt={link.title}
                 width={24}
                 height={24}
+                className="invert"
               />
             ) : (
               link.title
