@@ -8,6 +8,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "gradient-brown": "linear-gradient(45deg, #5a4230, #c09473)",
+        "gradient-black":
+          "linear-gradient(0deg, rgba(34,193,195,0) 0%, rgba(0,0,0,0.4) 60%)",
+      },
       colors: {
         text: {
           DEFAULT: "#f2f5f8",

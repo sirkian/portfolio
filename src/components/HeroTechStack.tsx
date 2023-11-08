@@ -17,17 +17,17 @@ const HeroTechStack = () => {
   };
 
   return (
-    <div className="mb-4">
+    <div className="mb-4 border-t-2 border-t-background-800 pt-3">
       <ul className="flex gap-5">
         {featuredTechnologies.map((tech) => (
           <li
             key={tech.id}
-            className="relative w-[3rem] h-[3rem]"
+            className="relative w-[2rem] h-[2rem] md:w-[3rem] md:h-[3rem]"
             onMouseEnter={() => handleMouseEnter(tech)}
             onMouseLeave={handleMouseLeave}>
             <Image src={tech.iconUrl} alt={tech.title} fill />
             {hoveredTech === tech && (
-              <div className="absolute bg-background-800 text-text-50 p-2 rounded-sm text-xs top-14 left-5 transform -translate-x-1/2 opacity-90">
+              <div className="absolute bg-background-800 text-text-50 rounded-md text-xs md:text-sm p-1 md:p-2 top-9 md:top-14 left-5 transform -translate-x-1/2 opacity-90">
                 {tech.title}
               </div>
             )}

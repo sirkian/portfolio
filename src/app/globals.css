@@ -9,3 +9,9 @@ html {
 .invert {
     filter: invert(100%);
 }
+.gradient-text {
+    background-image: linear-gradient(45deg, #5a4230, #c09473);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}

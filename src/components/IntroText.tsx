@@ -35,7 +35,7 @@ const IntroText = () => {
 
   return (
     <div className="text-center">
-      <p className="text-lg md:text-2xl border-r-2 border-background-800 inline-block w-max">
+      <p className="text-lg md:text-2xl lg:text-3xl xl:text-4xl border-r-2 border-background-800 inline-block w-max">
         a {currentText}
       </p>
     </div>
