@@ -17,7 +17,7 @@ const HeroTechStack = () => {
   };
 
   return (
-    <div className="mb-4 border-t-2 border-t-background-800 pt-3">
+    <div className="mb-4 border-t-2 pt-3">
       <ul className="flex gap-5">
         {featuredTechnologies.map((tech) => (
           <li

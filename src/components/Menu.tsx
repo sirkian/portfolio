@@ -17,7 +17,7 @@ const Menu = () => {
           width={24}
           height={24}
           onClick={() => setOpen(true)}
-          className="invert"
+          className="dark:invert"
         />
       ) : (
         <Image
@@ -26,7 +26,7 @@ const Menu = () => {
           width={24}
           height={24}
           onClick={() => setOpen(false)}
-          className="invert"
+          className="dark:invert"
         />
       )}
       {open && (
@@ -42,7 +42,7 @@ const Menu = () => {
                   alt={link.title}
                   width={32}
                   height={32}
-                  className="invert"
+                  className="dark:invert"
                 />
               ) : (
                 link.title

@@ -6,20 +6,22 @@ import HeroTechStack from "./HeroTechStack";
 
 const Hero = () => {
   return (
-    <div className=" bg-gradient-black h-full text-text grid grid-cols-1 md:grid-rows-7 md:grid-cols-2 gap-4 md:px-20 2xl:px-80">
+    <div className="relative bg-gradient-black h-full text-text grid grid-cols-1 md:grid-rows-7 md:grid-cols-2 gap-4 md:px-20 2xl:px-80">
       <div className=" md:col-span-1 md:row-span-3 h-full w-full flex flex-col items-center justify-center gap-10 md:gap-20">
         <h1 className="gradient-text text-center font-extrabold text-2xl md:text-4xl lg:text-6xl">
           Hello, I'm Anssi
         </h1>
         <IntroText />
         <div className="flex flex-col items-center text-sm lg:text-lg xl:text-xl gap-2 md:gap-5 xl:gap-8 md:flex-row md:mt-10">
-          <a className="hover:bg-background-800 p-2 rounded-md" href="#contact">
+          <a
+            className="bg-background-200 hover:bg-primary hover:text-secondary p-2 rounded-md"
+            href="#contact">
             Contact Me
           </a>
           <a
             href="/CV_Anssi_Sirkia_en.pdf"
             download="CV_Sirkia.pdf"
-            className="text-secondary bg-gradient-accent hover:bg-primary hover:text-text-50 p-2 rounded-md">
+            className="text-secondary bg-primary hover:bg-accent hover:text-text-50 p-2 rounded-md">
             Download CV
           </a>
         </div>

@@ -19,7 +19,7 @@ const Navbar = () => {
                 alt={link.title}
                 width={24}
                 height={24}
-                className="invert"
+                className="dark:invert"
               />
             ) : (
               link.title
