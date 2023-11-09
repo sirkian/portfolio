@@ -1,3 +1,4 @@
+import Contact from "@/components/Contact";
 import Hero from "@/components/Hero";
 
 export default function Home() {
@@ -6,16 +7,16 @@ export default function Home() {
       <section className="h-[calc(100vh-5rem)] bg-background">
         <Hero />
       </section>
-      <section className="h-screen flex items-center justify-center bg-background-800 text-text">
+      <section className="h-screen flex items-center justify-center bg-backgroundGradient">
         ABOUT
       </section>
-      <section className="h-screen flex items-center justify-center bg-background-900 text-text">
+      <section className="h-screen flex items-center justify-center">
         SKILLS
       </section>
       <section
         id="contact"
-        className="h-screen flex items-center justify-center bg-background-950 text-text">
-        CONTACT
+        className="h-screen flex items-center justify-center">
+        <Contact />
       </section>
     </main>
   );

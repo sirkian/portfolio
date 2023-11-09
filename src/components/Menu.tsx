@@ -4,6 +4,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { links } from "@/utils/links";
 import Image from "next/image";
+import { ModeToggle } from "./ModeToggle";
 
 const Menu = () => {
   const [open, setOpen] = useState(false);
@@ -48,6 +49,7 @@ const Menu = () => {
               )}
             </Link>
           ))}
+          <ModeToggle />
         </div>
       )}
     </div>

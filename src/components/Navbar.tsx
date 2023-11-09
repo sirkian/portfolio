@@ -2,6 +2,7 @@ import Menu from "./Menu";
 import Link from "next/link";
 import { links } from "@/utils/links";
 import Image from "next/image";
+import { ModeToggle } from "./ModeToggle";
 
 const Navbar = () => {
   return (
@@ -9,7 +10,7 @@ const Navbar = () => {
       <div className="font-bold">
         <Link href="/">Homepage</Link>
       </div>
-      <div className="hidden md:flex gap-4">
+      <div className="hidden md:flex gap-4 items-center">
         {links.map((link) => (
           <Link href={link.url} key={link.id}>
             {link.iconUrl ? (
@@ -25,6 +26,7 @@ const Navbar = () => {
             )}
           </Link>
         ))}
+        <ModeToggle />
       </div>
       <div className="md:hidden right-0">
         <Menu />

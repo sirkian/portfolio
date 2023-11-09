@@ -19,7 +19,7 @@ const Hero = () => {
           <a
             href="/CV_Anssi_Sirkia_en.pdf"
             download="CV_Sirkia.pdf"
-            className="text-secondary bg-gradient-brown hover:bg-primary hover:text-text-50 p-2 rounded-md">
+            className="text-secondary bg-gradient-accent hover:bg-primary hover:text-text-50 p-2 rounded-md">
             Download CV
           </a>
         </div>
