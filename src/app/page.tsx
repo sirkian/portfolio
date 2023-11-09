@@ -1,4 +1,5 @@
 import Contact from "@/components/Contact";
+import FeaturedProjects from "@/components/FeaturedProjects";
 import Hero from "@/components/Hero";
 
 export default function Home() {
@@ -10,8 +11,8 @@ export default function Home() {
       <section className="h-screen flex items-center justify-center bg-background-200">
         ABOUT
       </section>
-      <section className="h-screen flex items-center justify-center bg-background">
-        SKILLS
+      <section className="min-h-max flex justify-center bg-background">
+        <FeaturedProjects />
       </section>
       <section
         id="contact"

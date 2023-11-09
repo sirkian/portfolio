@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark" // Switch back to system when lightmode is decent
           enableSystem
           disableTransitionOnChange>
           <Navbar />

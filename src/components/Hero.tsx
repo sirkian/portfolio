@@ -29,7 +29,7 @@ const Hero = () => {
 
       <div className="md:col-span-1 md:row-span-3 flex justify-center items-center w-full md:h-full">
         <div className="relative w-[80%] h-[80%] xl:w-[60%] xl:h-[60%]">
-          <Image src="/pfp.jpg" alt="" fill className="object-contain" />
+          <Image src="/images/pfp.jpg" alt="" fill className="object-contain" />
         </div>
       </div>
       <div className="md:col-span-2 md:row-span-1 flex justify-center items-center mb-5 md:mb-0">
