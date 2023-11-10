@@ -60,6 +60,15 @@
         @apply bg-background text-foreground;
     }
 }
+@keyframes fade-up {
+    0% {
+        transform: translateY(-50px) scale(0.9);
+    }
+
+    100% {
+        transform: translateY(0px) scale(1);
+    }
+}
 @keyframes fade-down {
     0% {
         opacity: 0;
@@ -81,6 +90,7 @@
         opacity: 1;
     }
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -101,4 +111,13 @@ html {
 
 .animate-in {
     animation: fade-in 0.5s ease-in;
+}
+.portfolio-up {
+    animation: fade-up 0.5s;
+    background-color: red;
+}
+
+.test {
+    background-color: #fec672;
+    transform: translateY(-100px);
 }
