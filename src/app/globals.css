@@ -39,7 +39,7 @@
         --primary-foreground: 216 33% 6%;
         --secondary: 216 100% 5%;
         --secondary-foreground: 0 0% 100%;
-        --muted: 215 33% 80%;
+        --muted: 276 5% 60%;
         --muted-foreground: 0 0% 100%;
         --accent: 36 98% 45%;
         --accent-foreground: 216 33% 6%;
@@ -58,15 +58,6 @@
 
     body {
         @apply bg-background text-foreground;
-    }
-}
-@keyframes fade-up {
-    0% {
-        transform: translateY(-50px) scale(0.9);
-    }
-
-    100% {
-        transform: translateY(0px) scale(1);
     }
 }
 @keyframes fade-down {
@@ -111,13 +102,4 @@ html {
 
 .animate-in {
     animation: fade-in 0.5s ease-in;
-}
-.portfolio-up {
-    animation: fade-up 0.5s;
-    background-color: red;
-}
-
-.test {
-    background-color: #fec672;
-    transform: translateY(-100px);
 }
