@@ -7,7 +7,7 @@ const PortfolioItem = () => {
   const liveProject = true;
 
   return (
-    <div className="relative group flex justify-center items-center bg-muted dark:bg-background-200 text-primary-foreground h-64 w-96 rounded-lg md:h-80 md:w-[30rem] xl:w-[32rem]">
+    <div className="relative group flex justify-center items-center bg-muted dark:bg-background-200 text-primary-foreground h-64 w-[20.5rem] rounded-lg md:h-80 md:w-[30rem] xl:w-[32rem]">
       <Image
         src="/images/faux1.png"
         alt=""
