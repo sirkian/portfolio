@@ -6,7 +6,7 @@ import { ModeToggle } from "./ModeToggle";
 
 const Navbar = () => {
   return (
-    <nav className="bg-background-950 text-text  border-b-2 border-text-200 h-20 p-4 w-full flex items-center justify-around">
+    <nav className="fixed z-50 bg-background-200 text-text  border-b-2 border-text-200 h-20 p-4 w-full flex items-center justify-around">
       <div className="font-bold">
         <Link href="/">Homepage</Link>
       </div>

@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/utils/theme-provider";
 import { Toaster } from "@/components/ui/toaster";
+import ScrollToTopButton from "@/components/ScrollToTop";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,6 +27,7 @@ export default function RootLayout({
           defaultTheme="dark" // Switch back to system when lightmode is decent
           disableTransitionOnChange>
           <Navbar />
+          <ScrollToTopButton />
           {children}
           <Toaster />
           <Footer />
