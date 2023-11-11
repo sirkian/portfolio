@@ -24,7 +24,6 @@ export default function RootLayout({
         <ThemeProvider
           attribute="class"
           defaultTheme="dark" // Switch back to system when lightmode is decent
-          enableSystem
           disableTransitionOnChange>
           <Navbar />
           {children}
