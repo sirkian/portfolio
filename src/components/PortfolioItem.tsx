@@ -20,7 +20,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({ project }) => {
   } = project;
 
   return (
-    <div className="relative group flex justify-center items-center bg-muted dark:bg-background-200 text-primary-foreground h-60 w-[90vw] rounded-lg md:h-80 md:w-[30rem] xl:w-[32rem]">
+    <div className="relative group flex justify-center items-center bg-muted dark:bg-background-200 text-primary-foreground h-60 w-[90vw] max-w-[30rem] rounded-lg md:h-80 md:w-[30rem] xl:w-[32rem]">
       <Image
         src={imageUrls[0]}
         alt={title}

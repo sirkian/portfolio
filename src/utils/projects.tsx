@@ -1,3 +1,12 @@
+export const categoryList = [
+  "school work",
+  "front-end",
+  "backend",
+  "fullstack",
+  "react",
+  "java",
+] as const;
+
 export type ProjectType = {
   id: number;
   title: string;
@@ -7,6 +16,7 @@ export type ProjectType = {
   githubUrl: string;
   publishedUrl?: string;
   tags: string[];
+  categories: (typeof categoryList)[number][];
 };
 
 export const projects: ProjectType[] = [
@@ -20,6 +30,7 @@ export const projects: ProjectType[] = [
     imageUrls: ["/images/ticketguru1.png", "/images/ticketguru2.png"],
     githubUrl: "https://github.com/sirkian/TicketGuru",
     tags: ["Java", "ReactJS", "MySQL"],
+    categories: ["java", "react", "school work"],
   },
   {
     id: 2,
@@ -35,6 +46,7 @@ export const projects: ProjectType[] = [
     ],
     githubUrl: "https://github.com/sirkian/Backend-Harjoitustyo",
     tags: ["Java", "Thymeleaf", "MariaDB"],
+    categories: ["java", "backend", "school work"],
   },
   {
     id: 3,
@@ -50,6 +62,7 @@ export const projects: ProjectType[] = [
     ],
     githubUrl: "https://github.com/sirkian/Frontend-Harjoitustyo",
     tags: ["ReactJS", "Express.js", "Material UI"],
+    categories: ["front-end", "react", "school work"],
   },
   {
     id: 4,
@@ -61,6 +74,7 @@ export const projects: ProjectType[] = [
     githubUrl: "https://github.com/sirkian/FAUX",
     publishedUrl: "https://sirkian.github.io/FAUX/index.html",
     tags: ["HTML", "CSS"],
+    categories: ["front-end", "school work"],
   },
   {
     id: 5,
@@ -71,5 +85,6 @@ export const projects: ProjectType[] = [
     githubUrl: "https://github.com/sirkian/Faux",
     publishedUrl: "https://myy.haaga-helia.fi/~bgu129/",
     tags: ["HTML", "CSS"],
+    categories: ["front-end", "school work"],
   },
 ];

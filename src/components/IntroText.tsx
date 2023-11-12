@@ -34,9 +34,9 @@ const IntroText = () => {
   }, [currentText, currentIndex, textList]);
 
   return (
-    <div className="text-center">
-      <p className="text-secondary-foreground text-lg md:text-2xl lg:text-3xl xl:text-4xl border-r-2 border-accent inline-block w-max">
-        a {currentText}
+    <div className=" mx-auto">
+      <p className="text-secondary-foreground p-1  font-semibold text-xl md:text-2xl lg:text-3xl xl:text-4xl border-r-2 border-accent inline-block w-full">
+        {"> " + currentText}
       </p>
     </div>
   );
