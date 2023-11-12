@@ -12,7 +12,7 @@ export type ProjectType = {
   title: string;
   featureDescription?: string;
   description: string;
-  imageUrls: string[];
+  images: { filename: string; caption: string }[];
   githubUrl: string;
   publishedUrl?: string;
   tags: string[];
@@ -27,7 +27,16 @@ export const projects: ProjectType[] = [
       "Fullstack application with RESTful backend and React client.",
     description:
       "TicketGuru is a project for Software Project 1 -course. The application has a REST api that we implemented using Spring Boot and a front end with React.",
-    imageUrls: ["/images/ticketguru1.png", "/images/ticketguru2.png"],
+    images: [
+      {
+        filename: "ticketguru1.png",
+        caption: "Front page when logged in as an admin",
+      },
+      {
+        filename: "ticketguru2.png",
+        caption: "Sell tickets -view with different tickets selected",
+      },
+    ],
     githubUrl: "https://github.com/sirkian/TicketGuru",
     tags: ["Java", "ReactJS", "MySQL"],
     categories: ["java", "react", "school work"],
@@ -38,11 +47,11 @@ export const projects: ProjectType[] = [
     featureDescription:
       "A website for uploading images, made with Spring Boot.",
     description: "",
-    imageUrls: [
-      "/images/imgstr1.png",
-      "/images/imgstr2.png",
-      "/images/imgstr3.png",
-      "/images/imgstr4.png",
+    images: [
+      { filename: "imgstr1.png", caption: "ADD CAPTION" },
+      { filename: "imgstr2.png", caption: "ADD CAPTION" },
+      { filename: "imgstr3.png", caption: "ADD CAPTION" },
+      { filename: "imgstr4.png", caption: "ADD CAPTION" },
     ],
     githubUrl: "https://github.com/sirkian/Backend-Harjoitustyo",
     tags: ["Java", "Thymeleaf", "MariaDB"],
@@ -54,11 +63,11 @@ export const projects: ProjectType[] = [
     featureDescription:
       "React single page application, course work for Front-End Development",
     description: "",
-    imageUrls: [
-      "/images/recipes2.png",
-      "images/recipes1.png",
-      "images/recipes3.png",
-      "images/recipes4.png",
+    images: [
+      { filename: "recipes2.png", caption: "ADD CAPTION" },
+      { filename: "recipes1.png", caption: "ADD CAPTION" },
+      { filename: "recipes3.png", caption: "ADD CAPTION" },
+      { filename: "recipes4.png", caption: "ADD CAPTION" },
     ],
     githubUrl: "https://github.com/sirkian/Frontend-Harjoitustyo",
     tags: ["ReactJS", "Express.js", "Material UI"],
@@ -70,7 +79,7 @@ export const projects: ProjectType[] = [
     featureDescription: "Website for a restaurant, school work",
     description:
       "Responsive web page for an imaginary restaurant, made on my first year in Haaga-Helia as a course work for Orientation to Digital Services course in 2021. Made with HTML and CSS only.",
-    imageUrls: ["/images/faux1.png"],
+    images: [{ filename: "faux1.png", caption: "ADD CAPTION" }],
     githubUrl: "https://github.com/sirkian/FAUX",
     publishedUrl: "https://sirkian.github.io/FAUX/index.html",
     tags: ["HTML", "CSS"],
@@ -81,7 +90,7 @@ export const projects: ProjectType[] = [
     title: "Faux",
     description:
       "Responsive web page for an imaginary restaurant, made on my first year in Haaga-Helia as a course work for Orientation to Digital Services course. Made with HTML and CSS only.",
-    imageUrls: ["/images/faux1.png"],
+    images: [{ filename: "faux1.png", caption: "ADD CAPTION" }],
     githubUrl: "https://github.com/sirkian/Faux",
     publishedUrl: "https://myy.haaga-helia.fi/~bgu129/",
     tags: ["HTML", "CSS"],

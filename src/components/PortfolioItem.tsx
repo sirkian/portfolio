@@ -13,7 +13,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({ project }) => {
     id,
     title,
     featureDescription,
-    imageUrls,
+    images,
     githubUrl,
     publishedUrl,
     tags,
@@ -22,8 +22,8 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({ project }) => {
   return (
     <div className="relative group flex justify-center items-center bg-muted dark:bg-background-200 text-primary-foreground h-60 w-[90vw] max-w-[30rem] rounded-lg md:h-80 md:w-[30rem] xl:w-[32rem]">
       <Image
-        src={imageUrls[0]}
-        alt={title}
+        src={`/images/${project.images[0].filename}`}
+        alt={`/images/${project.images[0].caption}`}
         fill
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         className="rounded-md transition-transform transform group-hover:scale-50"
