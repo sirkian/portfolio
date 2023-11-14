@@ -1,11 +1,11 @@
 "use client";
 
-import { TechType, technologies } from "@/utils/technologies";
+import { TechType, skills } from "@/utils/skills";
 import Image from "next/image";
 import React, { useState } from "react";
 
 const HeroTechStack = () => {
-  const featuredTechnologies = technologies.filter((tech) => tech.featured);
+  const featuredTechnologies = skills.filter((tech) => tech.featured);
   const [hoveredTech, setHoveredTech] = useState<TechType | null>(null);
 
   const handleMouseEnter = (tech: TechType) => {
