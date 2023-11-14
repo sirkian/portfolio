@@ -6,7 +6,7 @@ import { LinkedInLogoIcon, EnvelopeClosedIcon } from "@radix-ui/react-icons";
 
 const About = () => {
   return (
-    <div className="flex flex-col items-center justify-evenly gap-20 md:gap-10 w-[80%] 2xl:w-[60vw]">
+    <div className="flex flex-col items-center justify-evenly gap-20 lg:gap-10 w-[80%] 2xl:w-[60vw]">
       <div className=" flex flex-col items-center lg:w-1/2">
         <h1 className="text-center my-10 font-semibold pb-1 border-b-2 border-b-accent text-2xl md:text-3xl">
           About me
