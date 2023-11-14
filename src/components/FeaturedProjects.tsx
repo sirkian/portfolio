@@ -4,9 +4,7 @@ import Link from "next/link";
 import { projects } from "@/utils/projects";
 
 const FeaturedProjects = () => {
-  const featuredProjects = projects.filter(
-    (project) => project.featureDescription
-  );
+  const featuredProjects = projects.filter((project) => project.featured);
 
   return (
     <div className="flex flex-col items-center gap-10">

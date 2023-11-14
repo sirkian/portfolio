@@ -20,36 +20,36 @@ const SingleProjectPage = () => {
           </h1>
           <ProjectSlider images={project.images} />
         </div>
-        <div className="flex flex-col md:flex-row w-full xl:w-[90%] 2xl:w-[70%] text-center gap-3 md:py-3">
-          <div className="md:w-1/3 p-5 md:order-first">
-            <ul className="my-1">
-              <li>Java</li>
-              <li>JavaScript</li>
-              <li>REST</li>
-              <li>MySQL</li>
-              <li>React.js</li>
-              <li>Deployed on Azure</li>
-            </ul>
+        <div className="flex flex-col md:flex-row w-full xl:w-[90%] 2xl:w-[60%] text-center gap-3 md:py-3">
+          <div className="md:w-1/3 p-5 md:order-first md:border-r-2">
+            {project.frontend && (
+              <div className="mb-5">
+                <h2 className="font-bold mb-3 text-accent">Front-End</h2>
+                <ul>
+                  {project.frontend.map((fe, index) => (
+                    <li key={index}> {fe} </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {project.backend && (
+              <div>
+                <h2 className="font-bold mb-3 text-accent">Backend</h2>
+                <ul>
+                  {project.backend.map((be, index) => (
+                    <li key={index}> {be} </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
           <div className="md:w-2/3 p-5 md:pr-8 2xl:pr-2 order-first text-justify">
-            <p className="my-1">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quod
-              accusamus nobis tempore debitis aperiam. Laudantium velit
-              consectetur ab ratione odit quae asperiores explicabo expedita
-              tempora blanditiis, voluptatum officia fugiat!
-            </p>
-            <p className="my-1">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quod
-              accusamus nobis tempore debitis aperiam. Laudantium velit
-              consectetur ab ratione odit quae asperiores explicabo expedita
-              tempora blanditiis, voluptatum officia fugiat!
-            </p>
-            <p className="my-1">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quod
-              accusamus nobis tempore debitis aperiam. Laudantium velit
-              consectetur ab ratione odit quae asperiores explicabo expedita
-              tempora blanditiis, voluptatum officia fugiat!
-            </p>
+            {project.description.map((paragraph, index) => (
+              <p key={index} className="mb-2">
+                {" "}
+                {paragraph}{" "}
+              </p>
+            ))}
           </div>
         </div>
       </div>

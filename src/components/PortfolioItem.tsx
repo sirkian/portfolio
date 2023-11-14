@@ -12,7 +12,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({ project }) => {
   const {
     id,
     title,
-    featureDescription,
+    previewDescription,
     images,
     githubUrl,
     publishedUrl,
@@ -40,7 +40,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({ project }) => {
         </div>
         <div className="bg-accent rounded-md min-h-min py-1 md:py-3 px-3 md:px-5 transition-transform translate-y-[160px] transform md:translate-y-[140px] group-hover:translate-y-0">
           <p className="text-sm md:text-md md:mb-4 text-center">
-            {featureDescription}
+            {previewDescription}
             <Link
               className={buttonVariants({ variant: "link" })}
               href={`/projects/${id}`}>
