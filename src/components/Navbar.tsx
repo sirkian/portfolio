@@ -1,8 +1,7 @@
 import Menu from "./Menu";
 import Link from "next/link";
-import { links } from "@/utils/links";
-import Image from "next/image";
 import { ModeToggle } from "./ModeToggle";
+import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 
 const Navbar = () => {
   return (
@@ -12,21 +11,17 @@ const Navbar = () => {
           <Link href="/">Homepage</Link>
         </div>
         <div className="hidden md:flex gap-4 items-center">
-          {links.map((link) => (
-            <Link href={link.url} key={link.id}>
-              {link.iconUrl ? (
-                <Image
-                  src={link.iconUrl}
-                  alt={link.title}
-                  width={24}
-                  height={24}
-                  className="dark:invert"
-                />
-              ) : (
-                link.title
-              )}
-            </Link>
-          ))}
+          <Link href="/projects" className="hover:text-accent">
+            Projects
+          </Link>
+          <Link href="https://github.com/sirkian" className="hover:text-accent">
+            <GitHubLogoIcon height={24} width={24} />
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/anssisirkia/"
+            className="hover:text-accent">
+            <LinkedInLogoIcon height={24} width={24} />
+          </Link>
           <ModeToggle />
         </div>
       </div>

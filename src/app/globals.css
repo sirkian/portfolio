@@ -60,17 +60,6 @@
         @apply bg-background text-foreground;
     }
 }
-@keyframes fade-down {
-    0% {
-        opacity: 0;
-        transform: translateY(-30px) scale(0.9);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0px) scale(1);
-    }
-}
 
 @keyframes fade-in {
     0% {
@@ -86,18 +75,11 @@ html {
     scroll-behavior: smooth;
 }
 
-.invert {
-    filter: invert(100%);
-}
-
 .gradient-text {
     background-image: linear-gradient(45deg, #fec672, #e38902);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-}
-.animate-down {
-    animation: fade-down 0.7s;
 }
 
 .animate-in {
