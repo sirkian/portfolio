@@ -83,7 +83,7 @@ const ContactForm = () => {
       <form
         ref={formRef}
         onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-8">
+        className="space-y-6">
         <FormField
           control={form.control}
           name="name"
