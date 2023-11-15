@@ -4,7 +4,6 @@ import IntroText from "./IntroText";
 import HeroTechStack from "./HeroTechStack";
 import { Shadows_Into_Light_Two } from "next/font/google";
 import Link from "next/link";
-import { Button } from "./ui/button";
 
 const shadows = Shadows_Into_Light_Two({
   weight: "400",
@@ -33,9 +32,12 @@ const Hero = () => {
                 ✅ Open for work / collaboration
               </span>
             </div>
-            <Button className="md:p-7">
-              <Link href="#contact">Contact Me</Link>
-            </Button>
+
+            <Link
+              className="p-2 text-primary-foreground font-semibold md:p-3 bg-primary rounded-md hover:bg-accent"
+              href="#contact">
+              Contact Me
+            </Link>
           </div>
         </div>
 
@@ -45,7 +47,8 @@ const Hero = () => {
               src="/images/pfp.jpg"
               alt=""
               fill
-              className="object-cover rounded-full"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className="object-cover rounded-full grayscale"
             />
           </div>
         </div>

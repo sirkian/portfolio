@@ -43,7 +43,8 @@ const IntroText = () => {
   return (
     <div className="w-fit">
       <p className="text-secondary-foreground font-semibold text-xl md:text-2xl lg:text-3xl xl:text-4xl border-r-[1px] border-accent pr-1">
-        {"> " + currentText}
+        <span className="text-accent font-bold">{"> "}</span>
+        {currentText}
       </p>
     </div>
   );
