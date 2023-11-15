@@ -1,14 +1,14 @@
 "use client";
 
-import { TechType, skills } from "@/utils/skills";
+import { SkillType, skills } from "@/utils/skills";
 import Image from "next/image";
 import React, { useState } from "react";
 
 const HeroTechStack = () => {
   const featuredTechnologies = skills.filter((tech) => tech.featured);
-  const [hoveredTech, setHoveredTech] = useState<TechType | null>(null);
+  const [hoveredTech, setHoveredTech] = useState<SkillType | null>(null);
 
-  const handleMouseEnter = (tech: TechType) => {
+  const handleMouseEnter = (tech: SkillType) => {
     setHoveredTech(tech);
   };
 
@@ -17,7 +17,7 @@ const HeroTechStack = () => {
   };
 
   return (
-    <div className="mb-4 border-t-2 pt-3">
+    <div className="mb-4 border-t-[1px] border-t-accent pt-3">
       <ul className="flex gap-5">
         {featuredTechnologies.map((tech) => (
           <li

@@ -6,13 +6,13 @@ import Hero from "@/components/Hero";
 export default function Home() {
   return (
     <main>
-      <section className="h-screen bg-background animate-in">
+      <section className="h-screen animate-in">
         <Hero />
       </section>
       <section className="min-h-screen flex justify-center bg-background-200">
         <About />
       </section>
-      <section className="min-h-max flex justify-center bg-background">
+      <section className="min-h-max flex justify-center">
         <FeaturedProjects />
       </section>
       <section

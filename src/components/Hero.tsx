@@ -1,43 +1,53 @@
-/* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
 import React from "react";
 import IntroText from "./IntroText";
 import HeroTechStack from "./HeroTechStack";
+import { Shadows_Into_Light_Two } from "next/font/google";
+import Link from "next/link";
+import { Button } from "./ui/button";
+
+const shadows = Shadows_Into_Light_Two({
+  weight: "400",
+  style: ["normal"],
+  subsets: ["latin"],
+  display: "swap",
+});
 
 const Hero = () => {
   return (
-    <div className="relative bg-gradient-black h-full text-text grid grid-cols-1 md:grid-rows-7 md:grid-cols-2 gap-4 md:px-20 2xl:px-80">
-      <div className=" md:col-span-1 md:row-span-3 h-full w-full flex flex-col justify-center gap-10 md:gap-20">
-        <h1 className="gradient-text text-center font-black text-4xl lg:text-6xl">
-          Hello, I'm Anssi
-        </h1>
-        <IntroText />
-        <div className=" flex flex-col items-center p-5 gap-10 md:gap-0">
-          <span className="text-sm md:text-base"> 📍 Uusimaa, Finland</span>
-          <div className="flex flex-row items-center text-sm lg:text-lg xl:text-xl gap-5 md:gap-5 xl:gap-8 md:mt-10">
-            <a
-              className="text-secondary bg-primary hover:bg-accent hover:text-text-50 p-2 rounded-md"
-              href="#contact">
-              Contact Me
-            </a>
-            <a
-              href="/CV_Anssi_Sirkia_en.pdf"
-              download="CV_Sirkia.pdf"
-              className="bg-background-200 hover:bg-primary hover:text-secondary p-2 rounded-md">
-              CV <span className="text-xs">PDF</span>
-            </a>
+    <div className="h-[calc(100vh-3rem)] lg:w-[90vw] 2xl:w-[70vw] flex flex-col mx-auto">
+      <div className="h-full flex flex-col md:flex-row items-center justify-center gap-8 md:gap-0">
+        <div className="flex md:flex-1 flex-col items-center gap-10">
+          <h1
+            className={`${shadows.className} gradient-text text-5xl lg:text-8xl p-2 md:p-5`}>
+            Hello, I&apos;m Anssi
+          </h1>
+          <div className="">
+            <IntroText />
+          </div>
+
+          <div className="flex flex-col items-center gap-10">
+            <div className="flex flex-col gap-2 items-center">
+              <span className="text-sm md:text-base"> 📍 Uusimaa, Finland</span>
+              <span className="text-sm md:text-base">
+                ✅ Open for work / collaboration
+              </span>
+            </div>
+            <Button className="md:p-7">
+              <Link href="#contact">Contact Me</Link>
+            </Button>
           </div>
         </div>
-      </div>
 
-      <div className="md:col-span-1 md:row-span-3 flex justify-center items-center w-full md:h-full">
-        <div className="relative w-32 h-32 xl:w-[60%] xl:h-[60%]">
-          <Image
-            src="/images/pfp.jpg"
-            alt=""
-            fill
-            className="object-contain rounded-full md:rounded-none"
-          />
+        <div className="flex md:flex-1 justify-center items-center w-1/2 md:h-full order-first md:order-last">
+          <div className="relative w-[10rem] h-[10rem] md:w-[20rem] md:h-[20rem] lg:w-[25rem] lg:h-[25rem]">
+            <Image
+              src="/images/pfp.jpg"
+              alt=""
+              fill
+              className="object-cover rounded-full"
+            />
+          </div>
         </div>
       </div>
       <div className="md:col-span-2 md:row-span-1 flex justify-center items-center mb-5 md:mb-0">

@@ -42,11 +42,17 @@ const Menu = () => {
         <div className="text-text backdrop-blur-xl bg-[rgba(219,219,219,0.5)] dark:bg-[rgba(15,15,15,0.5)] absolute inset-0 w-full h-screen flex flex-col gap-8 items-center justify-around text-2xl font-semibold ">
           <div className="flex justify-center flex-col items-center p-5 rounded-md gap-10 mt-10">
             <Link href="/" onClick={() => setOpen(false)}>
-              Homepage
+              Home
             </Link>
             <Link href="/projects" onClick={() => setOpen(false)}>
               Projects
             </Link>
+            <a
+              href="/CV_Anssi_Sirkia_en.pdf"
+              download="CV_Sirkia.pdf"
+              onClick={() => setOpen(false)}>
+              Resume (PDF)
+            </a>
             <div className="flex gap-5">
               <Link href="https://github.com/sirkian">
                 <GitHubLogoIcon height={28} width={28} />

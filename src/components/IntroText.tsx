@@ -5,6 +5,8 @@ import React, { useState, useEffect, useMemo } from "react";
 const IntroText = () => {
   const [currentText, setCurrentText] = useState<string>("");
   const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [isDeleting, setIsDeleting] = useState<boolean>(false);
+  const [typingSpeed, setTypingSpeed] = useState<number>(150);
 
   const textList: string[] = useMemo(
     () => [
@@ -17,25 +19,30 @@ const IntroText = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (currentText.length < textList[currentIndex].length) {
+      if (!isDeleting && currentText.length < textList[currentIndex].length) {
         setCurrentText((prevText) =>
           textList[currentIndex].substring(0, prevText.length + 1)
         );
       } else {
-        clearInterval(interval);
-        setTimeout(() => {
-          setCurrentText("");
+        setIsDeleting(true);
+        setTypingSpeed(80);
+        setCurrentText((prevText) =>
+          textList[currentIndex].substring(0, prevText.length - 1)
+        );
+        if (currentText === "") {
+          setIsDeleting(false);
+          setTypingSpeed(150);
           setCurrentIndex((currentIndex + 1) % textList.length);
-        }, 1200);
+        }
       }
-    }, 130);
+    }, typingSpeed);
 
     return () => clearInterval(interval);
-  }, [currentText, currentIndex, textList]);
+  }, [currentText, currentIndex, isDeleting, textList, typingSpeed]);
 
   return (
-    <div className=" mx-auto">
-      <p className="text-secondary-foreground p-1  font-semibold text-xl md:text-2xl lg:text-3xl xl:text-4xl border-r-2 border-accent inline-block w-full">
+    <div className="w-fit">
+      <p className="text-secondary-foreground font-semibold text-xl md:text-2xl lg:text-3xl xl:text-4xl border-r-[1px] border-accent pr-1">
         {"> " + currentText}
       </p>
     </div>
