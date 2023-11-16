@@ -7,12 +7,15 @@ const Footer = () => {
     <footer className="bg-background text-xs md:text-sm h-28 min-h-fit flex justify-center">
       <div className="flex items-center justify-center flex-col gap-1">
         <div>© 2023 Anssi Sirkiä</div>
-        <div>Made with TypeScript, Next.js, TailwindCSS & ☕</div>
-        <div>
+        <div>Made with TypeScript, NEXT.js, TailwindCSS & ☕</div>
+        <div className="flex text-accent gap-5">
           <Link
             href="https://github.com/sirkian/portfolio"
-            className="flex items-center gap-2 text-accent hover:text-secondary-foreground">
+            className="flex items-center gap-2 hover:text-secondary-foreground">
             <GitHubLogoIcon /> Source
+          </Link>
+          <Link href="/about" className="hover:text-secondary-foreground">
+            About this page
           </Link>
         </div>
         <div className="flex items-center gap-1 hover:text-accent">
