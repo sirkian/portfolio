@@ -15,7 +15,7 @@ const Navbar = () => {
         <div className="flex gap-4 items-center">
           <LinkToProjects />
           <a
-            href="/CV_Anssi_Sirkia_en.pdf"
+            href="/resume-anssisirkia.pdf"
             download="CV_Sirkia.pdf"
             className="font-semibold hover:text-accent">
             Resume (PDF)

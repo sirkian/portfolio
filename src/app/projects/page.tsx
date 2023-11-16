@@ -30,7 +30,7 @@ const ProjectsPage = () => {
               key={i}
               onClick={() => handleCategory(cat)}
               variant="link"
-              className={`cursor-pointer bg-primary text-secondary text-xs md:text-sm py-1 px-2 rounded-md capitalize ${
+              className={`cursor-pointer bg-primary text-secondary text-xs md:text-sm py-1 px-2 rounded-md capitalize hover:no-underline ${
                 category === cat && "bg-slate-500"
               }`}>
               {cat}

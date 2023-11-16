@@ -48,7 +48,7 @@ const Menu = () => {
               Projects
             </Link>
             <a
-              href="/CV_Anssi_Sirkia_en.pdf"
+              href="/resume-anssisirkia.pdf"
               download="CV_Sirkia.pdf"
               onClick={() => setOpen(false)}>
               Resume (PDF)
