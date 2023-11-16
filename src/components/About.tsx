@@ -78,7 +78,7 @@ const About = () => {
           <ul className="flex flex-wrap justify-center gap-2 md:gap-3 py-5">
             {skills.map((skill) => (
               <li
-                className="flex text-xs md:text-base  p-2 min-w-fit rounded-md gap-2 border-[1px] border-accent"
+                className="flex items-center text-xs md:text-base p-2 min-w-fit rounded-md gap-2 border-[1px] border-accent"
                 key={skill.id}>
                 <Image
                   src={skill.iconUrl}

@@ -9,11 +9,11 @@ export default function Home() {
       <section className="h-screen animate-in">
         <Hero />
       </section>
-      <section className="min-h-screen flex justify-center bg-background-200">
-        <About />
-      </section>
-      <section className="min-h-max flex justify-center">
+      <section className="min-h-max flex justify-center bg-background-200">
         <FeaturedProjects />
+      </section>
+      <section className="min-h-screen flex justify-center">
+        <About />
       </section>
       <section
         id="contact"

@@ -1,7 +1,10 @@
 "use client";
 
 import ProjectSlider from "@/components/ProjectSlider";
+import { buttonVariants } from "@/components/ui/button";
 import { projects } from "@/utils/projects";
+import { GitHubLogoIcon, GlobeIcon } from "@radix-ui/react-icons";
+import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import React from "react";
 
@@ -33,10 +36,25 @@ const SingleProjectPage = () => {
           <h1 className="mb-4 font-bold text-2xl lg:text-4xl text-center text-accent">
             {project.title}
           </h1>
+          <div className="flex justify-center gap-5 mb-3">
+            <Link
+              className={buttonVariants({ variant: "secondary" })}
+              href={project.githubUrl}>
+              <GitHubLogoIcon className="mr-1" /> GitHub
+            </Link>
+            {project.publishedUrl && (
+              <Link
+                className={buttonVariants({ variant: "secondary" })}
+                href={project.publishedUrl}>
+                <GlobeIcon className="mr-1" />
+                Live Project
+              </Link>
+            )}
+          </div>
           <ProjectSlider images={project.images} />
         </div>
-        <div className="flex flex-col md:flex-row w-full xl:w-[90%] 2xl:w-[60%]  text-center gap-3 md:py-3">
-          <div className="md:w-1/3 p-5 md:order-first md:border-r-2">
+        <div className="flex flex-col md:flex-row w-full xl:w-[90%] 2xl:w-[60%] text-center gap-3 md:py-3">
+          <div className="md:w-1/3 p-5 md:order-first md:border-r-[1px] border-muted">
             {project.frontend && (
               <div className="mb-5">
                 <h2 className="font-bold mb-3 text-accent">Front-End</h2>
@@ -66,6 +84,7 @@ const SingleProjectPage = () => {
             ))}
           </div>
         </div>
+
         <div className="absolute bottom-5 flex gap-5 text-sm">
           <span
             className={`${

@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { buttonVariants } from "@/components/ui/button";
 import { ProjectType } from "@/utils/projects";
+import { GitHubLogoIcon, GlobeIcon } from "@radix-ui/react-icons";
 
 type PortfolioItemProps = {
   project: ProjectType;
@@ -22,8 +23,8 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({ project }) => {
   return (
     <div className="relative group flex justify-center items-center bg-muted dark:bg-background-200 text-primary-foreground h-60 w-[90vw] max-w-[30rem] rounded-lg md:h-80 md:w-[30rem] xl:w-[32rem]">
       <Image
-        src={`/images/${project.images[0].filename}`}
-        alt={`/images/${project.images[0].caption}`}
+        src={`/images/${images[0].filename}`}
+        alt={`/images/${images[0].caption}`}
         fill
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         className="rounded-md transition-transform transform group-hover:scale-50"
@@ -39,24 +40,25 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({ project }) => {
           </div>
         </div>
         <div className="bg-accent rounded-md min-h-min py-1 md:py-3 px-3 md:px-5 transition-transform translate-y-[160px] transform md:translate-y-[140px] group-hover:translate-y-0">
-          <p className="text-sm md:text-md md:mb-4 text-center">
-            {previewDescription}
+          <p className="text-sm md:text-md font-semibold mb-2 md:mb-4 text-center">
+            {previewDescription} <br />
             <Link
-              className={buttonVariants({ variant: "link" })}
+              className="font-bold hover:border-b-[1px] border-primary-foreground"
               href={`/projects/${id}`}>
-              See more..
+              Read more about this project.
             </Link>
           </p>
           <div className="flex justify-between">
             <Link
               className={buttonVariants({ variant: "secondary" })}
               href={githubUrl}>
-              GitHub
+              <GitHubLogoIcon className="mr-1" /> GitHub
             </Link>
             {publishedUrl && (
               <Link
                 className={buttonVariants({ variant: "secondary" })}
                 href={publishedUrl}>
+                <GlobeIcon className="mr-1" />
                 Live Project
               </Link>
             )}

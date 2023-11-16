@@ -17,7 +17,7 @@ const FeaturedProjects = () => {
         ))}
       </div>
       <h3 className="pb-1 mb-10 text-accent border-b-2 border-b-accent hover:text-primary hover:border-b-primary">
-        <Link href="/projects">See more &#11157;</Link>
+        <Link href="/projects">See all projects &#11157;</Link>
       </h3>
     </div>
   );
