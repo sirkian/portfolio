@@ -51,13 +51,17 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({ project }) => {
           <div className="flex justify-between">
             <Link
               className={buttonVariants({ variant: "secondary" })}
-              href={githubUrl}>
+              href={githubUrl}
+              target="_blank"
+              rel="noopener noreferrer">
               <GitHubLogoIcon className="mr-1" /> GitHub
             </Link>
             {publishedUrl && (
               <Link
                 className={buttonVariants({ variant: "secondary" })}
-                href={publishedUrl}>
+                href={publishedUrl}
+                target="_blank"
+                rel="noopener noreferrer">
                 <GlobeIcon className="mr-1" />
                 Live Project
               </Link>

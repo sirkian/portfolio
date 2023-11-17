@@ -28,7 +28,10 @@ const About = () => {
           collaborate or anything!
         </p>
         <div className="flex mt-5 gap-10">
-          <Link href="https://www.linkedin.com/in/anssisirkia/">
+          <Link
+            href="https://www.linkedin.com/in/anssisirkia/"
+            target="_blank"
+            rel="noopener noreferrer">
             <LinkedInLogoIcon
               width={28}
               height={28}

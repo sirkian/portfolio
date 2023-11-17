@@ -39,13 +39,17 @@ const SingleProjectPage = () => {
           <div className="flex justify-center gap-5 mb-3">
             <Link
               className={buttonVariants({ variant: "secondary" })}
-              href={project.githubUrl}>
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer">
               <GitHubLogoIcon className="mr-1" /> GitHub
             </Link>
             {project.publishedUrl && (
               <Link
                 className={buttonVariants({ variant: "secondary" })}
-                href={project.publishedUrl}>
+                href={project.publishedUrl}
+                target="_blank"
+                rel="noopener noreferrer">
                 <GlobeIcon className="mr-1" />
                 Live Project
               </Link>

@@ -11,6 +11,8 @@ const Footer = () => {
         <div className="flex text-accent gap-5">
           <Link
             href="https://github.com/sirkian/portfolio"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-2 hover:text-secondary-foreground">
             <GitHubLogoIcon /> Source
           </Link>
@@ -19,7 +21,12 @@ const Footer = () => {
           </Link>
         </div>
         <div className="flex items-center gap-1 hover:text-accent">
-          <Link href="https://vercel.com/">Hosted on Vercel</Link>{" "}
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://vercel.com/">
+            Hosted on Vercel
+          </Link>{" "}
           <VercelLogoIcon />
         </div>
       </div>

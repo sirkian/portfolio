@@ -20,11 +20,17 @@ const Navbar = () => {
             className="font-semibold hover:text-accent">
             Resume (PDF)
           </a>
-          <Link href="https://github.com/sirkian" className="hover:text-accent">
+          <Link
+            href="https://github.com/sirkian"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-accent">
             <GitHubLogoIcon height={24} width={24} />
           </Link>
           <Link
             href="https://www.linkedin.com/in/anssisirkia/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hover:text-accent">
             <LinkedInLogoIcon height={24} width={24} />
           </Link>
