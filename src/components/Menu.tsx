@@ -54,10 +54,16 @@ const Menu = () => {
               Resume (PDF)
             </a>
             <div className="flex gap-5">
-              <Link href="https://github.com/sirkian">
+              <Link
+                href="https://github.com/sirkian"
+                target="_blank"
+                rel="noopener noreferrer">
                 <GitHubLogoIcon height={28} width={28} />
               </Link>
-              <Link href="https://www.linkedin.com/in/anssisirkia/">
+              <Link
+                href="https://www.linkedin.com/in/anssisirkia/"
+                target="_blank"
+                rel="noopener noreferrer">
                 <LinkedInLogoIcon height={28} width={28} />
               </Link>
             </div>

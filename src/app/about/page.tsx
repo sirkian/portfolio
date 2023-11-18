@@ -13,6 +13,8 @@ const page = () => {
           This website was designed and coded by
           <Link
             href="https://www.linkedin.com/in/anssisirkia/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-accent">
             &nbsp;yours truly&nbsp;
           </Link>
@@ -21,6 +23,8 @@ const page = () => {
           after the deployment.
           <Link
             href="https://github.com/sirkian/portfolio"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-accent">
             &nbsp;Here&apos;s the Github repository for this site.
           </Link>
@@ -31,27 +35,57 @@ const page = () => {
         <ul>
           <li className="flex items-center gap-2 mb-1 hover:text-accent">
             <Link2Icon />
-            <Link href="https://www.typescriptlang.org/">TypeScript</Link>
+            <Link
+              href="https://www.typescriptlang.org/"
+              target="_blank"
+              rel="noopener noreferrer">
+              TypeScript
+            </Link>
           </li>
           <li className="flex items-center gap-2 mb-1 hover:text-accent">
             <Link2Icon />
-            <Link href="https://nextjs.org/">NEXT.js</Link>
+            <Link
+              href="https://nextjs.org/"
+              target="_blank"
+              rel="noopener noreferrer">
+              NEXT.js
+            </Link>
           </li>
           <li className="flex items-center gap-2 mb-1 hover:text-accent">
             <Link2Icon />
-            <Link href="https://tailwindcss.com/">TailwindCSS</Link>
+            <Link
+              href="https://tailwindcss.com/"
+              target="_blank"
+              rel="noopener noreferrer">
+              TailwindCSS
+            </Link>
           </li>
           <li className="flex items-center gap-2 mb-1 hover:text-accent">
             <Link2Icon />
-            <Link href="https://ui.shadcn.com/de">shadcn</Link>
+            <Link
+              href="https://ui.shadcn.com"
+              target="_blank"
+              rel="noopener noreferrer">
+              shadcn
+            </Link>
           </li>
           <li className="flex items-center gap-2 mb-1 hover:text-accent">
             <Link2Icon />
-            <Link href="https://www.radix-ui.com/icons">Radix Icons</Link>
+            <Link
+              href="https://www.radix-ui.com/icons"
+              target="_blank"
+              rel="noopener noreferrer">
+              Radix Icons
+            </Link>
           </li>
           <li className="flex items-center gap-2 mb-1 hover:text-accent">
             <Link2Icon />
-            <Link href="https://devicon.dev/">DEVICON</Link>
+            <Link
+              href="https://devicon.dev/"
+              target="_blank"
+              rel="noopener noreferrer">
+              DEVICON
+            </Link>
           </li>
         </ul>
       </section>

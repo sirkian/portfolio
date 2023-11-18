@@ -18,7 +18,7 @@ const Hero = () => {
       <div className="h-full flex flex-col md:flex-row items-center justify-center gap-8 md:gap-0">
         <div className="flex md:flex-1 flex-col items-center gap-10">
           <h1
-            className={`${shadows.className} gradient-text text-5xl lg:text-8xl p-2 md:p-5`}>
+            className={`${shadows.className} gradient-text text-5xl md:text-6xl lg:text-7xl xl:text-8xl py-2 md:py-5 `}>
             Hello, I&apos;m Anssi
           </h1>
           <div className="">
@@ -48,7 +48,8 @@ const Hero = () => {
               alt=""
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className="object-cover rounded-full grayscale"
+              className="object-contain rounded-full grayscale"
+              priority
             />
           </div>
         </div>
