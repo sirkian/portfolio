@@ -1,13 +1,34 @@
+"use client";
+
 import { skills } from "@/utils/skills";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { LinkedInLogoIcon, EnvelopeClosedIcon } from "@radix-ui/react-icons";
+import { motion } from "framer-motion";
 
 const About = () => {
+  const variants = {
+    initial: {
+      opacity: 0,
+    },
+    animate: {
+      opacity: 1,
+      transition: {
+        ease: "linear",
+        duration: 1,
+        delay: 0.5,
+      },
+    },
+  };
+
   return (
     <div className="flex flex-col items-center justify-evenly gap-20 lg:gap-10 w-[80%] 2xl:w-[60vw]">
-      <div className=" flex flex-col items-center lg:w-1/2">
+      <motion.div
+        variants={variants}
+        initial="initial"
+        whileInView="animate"
+        className=" flex flex-col items-center lg:w-1/2">
         <h1 className="text-center my-10 font-semibold pb-1 border-b-2 border-b-accent text-3xl md:text-4xl">
           About Me
         </h1>
@@ -46,10 +67,14 @@ const About = () => {
             />
           </Link>
         </div>
-      </div>
+      </motion.div>
 
       <div className="flex flex-col xl:flex-row md:gap-20">
-        <div className="flex-1 p-5 flex flex-col items-center">
+        <motion.div
+          variants={variants}
+          initial="initial"
+          whileInView="animate"
+          className="flex-1 p-5 flex flex-col items-center">
           <h2 className="text-center mb-3 text-xl md:text-2xl font-semibold border-b-2 border-b-accent">
             Education
           </h2>
@@ -64,8 +89,12 @@ const About = () => {
           </span>
           <span className="py-5 md:text-lg">2021 - current</span>
           <p className="text-center md:text-justify py-5"></p>
-        </div>
-        <div className="flex-1 flex flex-col items-center p-5 xl:order-first">
+        </motion.div>
+        <motion.div
+          variants={variants}
+          initial="initial"
+          whileInView="animate"
+          className="flex-1 flex flex-col items-center p-5 xl:order-first">
           <h2 className="text-center mb-3 text-xl md:text-2xl font-semibold border-b-2 border-b-accent">
             Skills
           </h2>
@@ -94,7 +123,7 @@ const About = () => {
               </li>
             ))}
           </ul>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
